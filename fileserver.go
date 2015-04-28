@@ -19,5 +19,7 @@ func main() {
 		log.Printf("%s %s %s", r.RemoteAddr, r.Method, r.URL)
 		handler.ServeHTTP(w, r)
 	})
+
+	fmt.Println("listen to 127.0.0.1:8000")
 	log.Fatal(http.ListenAndServe(":8000", nil))
 }
